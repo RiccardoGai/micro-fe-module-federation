@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <input
+      type="text"
+      v-model="searchText"
+      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+      placeholder="search"
+    />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import store, { setSearchText } from "../store";
+export default defineComponent({
+  computed: {
+    searchText: {
+      get() {
+        return store.searchText;
+      },
+      set(value) {
+        setSearchText(value);
+      },
+    },
+  },
+});
+</script>

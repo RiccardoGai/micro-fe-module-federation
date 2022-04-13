@@ -1,0 +1,31 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\IBM\Client Access\Emulator;C:\Program Files (x86)\IBM\Client Access\Shared;C:\Program Files (x86)\IBM\Client Access\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Lectra\InvMark32\Bin;C:\Users\Public\Documents\Gupta;C:\Program Files (x86)\Lectra\InvMark32\Gupta;C:\Users\riccardo.gai\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\riccardo.gai\AppData\Local\Microsoft\WindowsApps;C:\Users\riccardo.gai\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\riccardo.gai\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\riccardo.gai\.dotnet\tools;C:\Program Files (x86)\Rico Suter\NSwagStudio\
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  14.19.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Users\riccardo.gai\Desktop\micro-fe-module-federation\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at C:\Users\riccardo.gai\AppData\Roaming\nvm\v14.19.1\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\riccardo.gai\AppData\Roaming\nvm\v14.19.1\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\riccardo.gai\AppData\Roaming\nvm\v14.19.1\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
