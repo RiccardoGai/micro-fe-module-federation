@@ -9,6 +9,12 @@
   </div>
 </template>
 
+<style scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
+
 <script lang="ts">
 import { defineComponent } from "vue";
 import store, { setSearchText } from "../store";

@@ -24,6 +24,9 @@
   </div>
 </template>
 <style scoped>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 img {
   width: 300px;
   height: 300px;

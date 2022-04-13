@@ -18,6 +18,12 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'src/public'),
     },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization",
+    },
   },
 
   module: {
@@ -58,6 +64,7 @@ module.exports = {
         "./Header": "./src/components/Header",
         "./BookList": "./src/components/BookList",
         "./BookSearch": "./src/components/BookSearch",
+        "./VanillaHeader":"./src/components/VanillaHeader",
         "./VanillaBookList": "./src/components/VanillaBookList.ts",
         "./VanillaBookSearch": "./src/components/VanillaBookSearch.ts",
       },
