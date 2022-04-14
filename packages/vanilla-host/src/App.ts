@@ -1,15 +1,16 @@
-import "./index.scss";
+import './index.scss';
 
-import { subscribe } from "remote/store";
-import VanillaBookList from "remote/VanillaBookList";
-import VanillaBookSearch from "remote/VanillaBookSearch";
+import { subscribe } from 'remote/store';
+import VanillaBookList from 'remote/VanillaBookList';
+import VanillaBookSearch from 'remote/VanillaBookSearch';
+import VanillaHeader from 'remote/VanillaHeader';
+import { initStore } from 'remote/store';
 
-VanillaBookList("#foods");
-VanillaBookSearch("#search");
+initStore();
+VanillaHeader('#header', { name: 'Vanilla Host' });
+VanillaBookList('#books');
+VanillaBookSearch('#search');
 
-subscribe(({ filteredTaps }) => {
-  document.getElementById("like").innerText = filteredTaps
-    .slice(0, 3)
-    .map(({ beverageName }) => beverageName)
-    .join(", ");
+subscribe(({ filteredBooks }) => {
+  document.getElementById('count').innerText = filteredBooks.length;
 });

@@ -3,14 +3,16 @@
   <div class="container mx-auto">
     <div class="flex w-full">
       <div class="grid grid-cols-1">
-        <div class="flex justify-center">
-          <BookSearch class="my-8 w-1/2" />
+        <div class="flex justify-center items-center my-8">
+          <BookSearch class="w-1/2" />
+          <span class="ml-2">{{count}} Books founded</span>
         </div>
         <BookList />
       </div>
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from "vue";
 import BookList from "remote/BookList";

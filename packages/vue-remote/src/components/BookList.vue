@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-flow-row auto-rows-max grid-cols-4 gap-6">
     <div
-      class="flex flex-col font-sans shadow-xl rounded-md"
+      class="flex flex-col shadow-xl rounded-md"
       v-for="item in filteredBooks"
       :key="item.id"
     >
