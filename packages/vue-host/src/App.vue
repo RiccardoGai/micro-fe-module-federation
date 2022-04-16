@@ -1,38 +1,39 @@
 <template>
   <Header name="Vue Host" />
   <div class="container mx-auto">
-    <div class="flex w-full">
+    <div class="flex w-full justify-center">
       <div class="grid grid-cols-1">
-        <div class="flex justify-center items-center my-8">
-          <BookSearch class="w-1/2" />
-          <span class="ml-2">{{count}} Books founded</span>
-        </div>
-        <BookList />
+        <span class="text-3xl font-semibold my-4 text-center"
+          >My Favorite Book</span
+        >
+        <Book :book="myFavoriteBook" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import BookList from "remote/BookList";
-import BookSearch from "remote/BookSearch";
-import store from "remote/store";
-import Header from "remote/Header";
+import { defineComponent } from 'vue';
+import Book from 'remote/Book';
+import Header from 'remote/Header';
 
 export default defineComponent({
   components: {
-    BookList,
-    BookSearch,
+    Book,
     Header
   },
-  computed: {
-    count: {
-      get() {
-        return store.filteredBooks.length;
-      },
-      set() {},
-    },
-  },
+  data() {
+    return {
+      myFavoriteBook: {
+        id: 73517852,
+        fileName: '0073517852.jpg',
+        imageUrl: 'http://ecx.images-amazon.com/images/I/511IaP4FCKL.jpg',
+        title: 'Principles of Microeconomics',
+        author: 'Robert Frank',
+        categoryId: 2,
+        category: 'Business & Money'
+      }
+    };
+  }
 });
 </script>

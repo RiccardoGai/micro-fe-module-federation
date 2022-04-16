@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="border">
     <input
       type="text"
       v-model="searchText"
@@ -16,8 +16,9 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import store, { setSearchText } from "../store";
+import { BORDER } from '../constants';
+import { defineComponent } from 'vue';
+import store, { setSearchText } from '../store';
 export default defineComponent({
   computed: {
     searchText: {
@@ -26,8 +27,9 @@ export default defineComponent({
       },
       set(value) {
         setSearchText(value);
-      },
+      }
     },
-  },
+    border: () => BORDER
+  }
 });
 </script>

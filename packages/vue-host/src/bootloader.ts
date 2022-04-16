@@ -1,8 +1,6 @@
-import { createApp } from "vue";
-import { initStore } from "remote/store";
+import { createApp } from 'vue';
 
-import "./index.scss";
+import './index.scss';
 
-import App from "./App.vue";
-initStore();
-createApp(App).mount("#app");
+import App from './App.vue';
+createApp(App).mount('#app');
