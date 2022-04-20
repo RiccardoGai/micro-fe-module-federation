@@ -19,33 +19,27 @@ export interface IStore {
 const store = reactive<IStore>({
   books: [],
   filteredBooks: [],
-  searchText: ''
+  searchText: "",
 });
 
 const filter = () => {
   const regex = new RegExp(store.searchText, "i");
-  return store.books
-    .filter(
-      (x) =>
-      x.title.match(regex)
-    )
+  return store.books.filter((x) => x.title.match(regex));
 };
-
 
 export const initStore = (): void => {
   fetch(`http://localhost:8080/data.json`)
     .then((resp) => resp.json())
     .then((data) => {
-      store.books = data.slice(0,50);
+      store.books = data.slice(0, 50);
       store.filteredBooks = filter();
     });
-}
+};
 
 export const setSearchText = (text: string): void => {
   store.searchText = text;
   store.filteredBooks = filter();
 };
-
 
 type Callback = (store: IStore) => void;
 const subscribers: Callback[] = [];

@@ -6,10 +6,7 @@
         <div class="flex justify-center">
           <BookSearch class="my-8 w-1/2" />
         </div>
-        <div
-          :class="border"
-          class="grid grid-flow-row auto-rows-max grid-cols-4 gap-6"
-        >
+        <div class="grid grid-flow-row auto-rows-max grid-cols-4 gap-6">
           <Book :book="item" v-for="item in filteredBooks" :key="item.id" />
         </div>
       </div>
@@ -23,7 +20,6 @@ import Header from './components/Header.vue';
 import BookSearch from './components/BookSearch.vue';
 import Book from './components/Book.vue';
 import store from './store';
-import { BORDER } from './constants';
 
 export default defineComponent({
   components: {
@@ -37,8 +33,7 @@ export default defineComponent({
         return store.filteredBooks;
       },
       set(list) {}
-    },
-    border: () => BORDER
+    }
   }
 });
 </script>

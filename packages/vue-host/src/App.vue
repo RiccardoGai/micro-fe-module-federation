@@ -16,7 +16,6 @@
 import { defineComponent } from 'vue';
 import Book from 'remote/Book';
 import Header from 'remote/Header';
-
 export default defineComponent({
   components: {
     Book,
