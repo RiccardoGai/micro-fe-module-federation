@@ -1,5 +1,5 @@
-import "./index.scss";
+import './index.scss';
 
-import VanillaHeader from "remote/VanillaHeader";
+import VanillaHeader from 'remote/VanillaHeader';
 
-VanillaHeader("#header", { name: "Vanilla Host" });
+VanillaHeader('#header', { name: 'Vanilla Host' });

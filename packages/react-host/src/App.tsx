@@ -9,10 +9,15 @@ import { initStore, subscribe } from 'remote/store';
 
 initStore();
 
+interface ICategoryGroup {
+  category: string;
+  count: number;
+}
+
 const App = () => {
-  const headerRef = useRef();
-  const searchRef = useRef();
-  const [category, setCategory] = useState([]);
+  const headerRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const searchRef = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [category, setCategory] = useState<ICategoryGroup[]>([]);
 
   useEffect(() => {
     VanillaHeader(headerRef.current, { name: 'React Host' });
@@ -27,7 +32,7 @@ const App = () => {
             prev.push({ category: curr.category, count: 1 });
           }
           return prev;
-        }, [])
+        }, [] as ICategoryGroup[])
       );
     });
   }, []);
